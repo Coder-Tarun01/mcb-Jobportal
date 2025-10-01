@@ -8,7 +8,7 @@ const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '7d';
 
 export async function register(req: Request, res: Response, next: NextFunction) {
   try {
-    const { email, password, name, phone, role } = req.body;
+    const { email, password, name, phone, role, companyName, skills } = req.body;
     
     if (!email || !password || !name) {
       return res.status(400).json({ message: 'Email, password, and name are required' });
@@ -22,6 +22,15 @@ export async function register(req: Request, res: Response, next: NextFunction) 
     const hashedPassword = await bcrypt.hash(password, 10);
     const userId = Math.random().toString(36).substr(2, 9);
     
+    // Prepare additional data based on role
+    const additionalData: any = {};
+    if (role === 'employer' && companyName) {
+      additionalData.companyName = companyName;
+    }
+    if (role === 'employee' && skills) {
+      additionalData.skills = skills;
+    }
+    
     const user = await User.create({
       id: userId,
       email,
@@ -29,6 +38,7 @@ export async function register(req: Request, res: Response, next: NextFunction) 
       name,
       phone: phone || null,
       role: role || 'employee',
+      ...additionalData,
     });
 
     const token = jwt.sign(
@@ -48,6 +58,8 @@ export async function register(req: Request, res: Response, next: NextFunction) 
         email: user.email,
         name: user.name,
         role: user.role,
+        companyName: user.companyName,
+        skills: user.skills,
       },
     });
   } catch (e) {
@@ -98,6 +110,8 @@ export async function login(req: Request, res: Response, next: NextFunction) {
         email: user.email,
         name: user.name,
         role: user.role,
+        companyName: user.companyName,
+        skills: user.skills,
       },
     });
   } catch (e) {
@@ -124,6 +138,8 @@ export async function me(req: Request, res: Response, next: NextFunction) {
       name: user.name,
       phone: user.phone,
       role: user.role,
+      companyName: user.companyName,
+      skills: user.skills,
     });
   } catch (e) {
     next(e);
