@@ -27,23 +27,7 @@ export async function runSeed() {
         phone: u.phone ?? null, 
         role: (u.role === 'employer' ? 'employer' : 'employee') as 'employee' | 'employer' 
       })),
-      ...jobs.map(j => Job.upsert({ 
-        id: String(j.id), 
-        title: j.title, 
-        company: j.company, 
-        location: j.location ?? null, 
-        type: j.type ?? null, 
-        category: j.category ?? null, 
-        isRemote: Boolean(j.isRemote), 
-        description: j.description ?? null,
-        salary: j.salary ?? null,
-        experience: j.experience ?? null,
-        skills: j.skills ?? null,
-        requirements: j.requirements ?? null,
-        postedDate: j.postedDate ?? null,
-        applicationDeadline: j.applicationDeadline ?? null,
-        companyLogo: j.companyLogo ?? null
-      })),
+      ...jobs.map(j => Job.upsert({ id: String(j.id), title: j.title, company: j.company, location: j.location ?? null, type: j.type ?? null, category: j.category ?? null, isRemote: Boolean(j.isRemote), description: j.description ?? null })),
       ...candidates.map(c => Candidate.upsert({ id: Number(c.id), name: c.name, jobTitle: c.jobTitle ?? null, location: c.location ?? null })),
     ]);
 

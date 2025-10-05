@@ -3,6 +3,7 @@ export interface JobAttributes {
     id: string;
     title: string;
     company: string;
+    companyId?: string | null;
     location?: string | null;
     type?: string | null;
     category?: string | null;
@@ -14,6 +15,7 @@ export declare class Job extends Model<JobAttributes, JobCreation> implements Jo
     id: string;
     title: string;
     company: string;
+    companyId: string | null;
     location: string | null;
     type: string | null;
     category: string | null;

@@ -11,11 +11,23 @@ exports.swaggerSpec = (0, swagger_jsdoc_1.default)({
         info: {
             title: 'MCB REST API',
             version: '1.0.0',
-            description: 'Jobs, Users, Candidates API',
+            description: 'Complete Job Portal API with Authentication, Applications, Saved Jobs, Notifications, Profile Management, Search, Companies, and Analytics',
         },
         servers: [
             { url: 'http://localhost:4000' },
         ],
+        components: {
+            securitySchemes: {
+                bearerAuth: {
+                    type: 'http',
+                    scheme: 'bearer',
+                    bearerFormat: 'JWT',
+                },
+            },
+        },
+        security: [{
+                bearerAuth: [],
+            }],
     },
     // Parse JSDoc in route files for endpoint schemas
     apis: ['src/routes/*.ts', 'src/docs/**/*.ts'],

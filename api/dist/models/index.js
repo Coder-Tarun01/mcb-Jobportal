@@ -20,4 +20,8 @@ exports.sequelize = database_1.sequelize;
 __exportStar(require("./User"), exports);
 __exportStar(require("./Job"), exports);
 __exportStar(require("./Candidate"), exports);
+__exportStar(require("./Application"), exports);
+__exportStar(require("./SavedJob"), exports);
+__exportStar(require("./Notification"), exports);
+__exportStar(require("./Company"), exports);
 //# sourceMappingURL=index.js.map

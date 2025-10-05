@@ -12,7 +12,7 @@ const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 4000;
 async function start() {
     try {
         await models_1.sequelize.authenticate();
-        await models_1.sequelize.sync();
+        await models_1.sequelize.sync({ alter: true });
         if (process.env.NODE_ENV !== 'production') {
             await (0, seed_1.runSeed)();
         }

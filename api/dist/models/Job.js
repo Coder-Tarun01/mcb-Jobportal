@@ -7,6 +7,7 @@ class Job extends sequelize_1.Model {
     id;
     title;
     company;
+    companyId;
     location;
     type;
     category;
@@ -18,6 +19,7 @@ Job.init({
     id: { type: sequelize_1.DataTypes.STRING, primaryKey: true },
     title: { type: sequelize_1.DataTypes.STRING, allowNull: false },
     company: { type: sequelize_1.DataTypes.STRING, allowNull: false },
+    companyId: { type: sequelize_1.DataTypes.UUID, allowNull: true },
     location: { type: sequelize_1.DataTypes.STRING },
     type: { type: sequelize_1.DataTypes.STRING },
     category: { type: sequelize_1.DataTypes.STRING },

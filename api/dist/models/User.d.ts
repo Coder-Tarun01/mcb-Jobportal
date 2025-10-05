@@ -6,6 +6,9 @@ export interface UserAttributes {
     password: string;
     phone?: string | null;
     role: 'employee' | 'employer';
+    skills?: string[] | null;
+    resumeUrl?: string | null;
+    avatarUrl?: string | null;
     createdAt?: Date;
     updatedAt?: Date;
 }
@@ -17,6 +20,9 @@ export declare class User extends Model<UserAttributes, UserCreation> implements
     password: string;
     phone: string | null;
     role: 'employee' | 'employer';
+    skills: string[] | null;
+    resumeUrl: string | null;
+    avatarUrl: string | null;
     readonly createdAt: Date;
     readonly updatedAt: Date;
 }

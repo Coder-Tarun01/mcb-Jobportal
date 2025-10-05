@@ -30,18 +30,33 @@ async function register(req, res, next) {
             role: role || 'employee',
         });
         const token = jsonwebtoken_1.default.sign({ id: user.id, email: user.email, role: user.role }, JWT_SECRET);
+        // Safely extract user data without password
+        console.log('User object from database:', user);
+        console.log('User dataValues:', user.dataValues);
+        const userData = {
+            id: user.id || user.dataValues?.id,
+            email: user.email || user.dataValues?.email,
+            name: user.name || user.dataValues?.name,
+            phone: user.phone || user.dataValues?.phone,
+            role: user.role || user.dataValues?.role,
+            skills: user.skills || user.dataValues?.skills,
+            resumeUrl: user.resumeUrl || user.dataValues?.resumeUrl,
+            avatarUrl: user.avatarUrl || user.dataValues?.avatarUrl,
+            createdAt: user.createdAt || user.dataValues?.createdAt,
+            updatedAt: user.updatedAt || user.dataValues?.updatedAt
+        };
+        console.log('Final userData:', userData);
         res.status(201).json({
             token,
-            user: {
-                id: user.id,
-                email: user.email,
-                name: user.name,
-                role: user.role,
-            },
+            user: userData,
         });
     }
-    catch (e) {
-        next(e);
+    catch (error) {
+        console.error('Register error:', error);
+        res.status(500).json({
+            message: 'Internal server error',
+            error: process.env.NODE_ENV === 'development' ? error.message : undefined
+        });
     }
 }
 async function login(req, res, next) {
@@ -50,27 +65,57 @@ async function login(req, res, next) {
         if (!email || !password) {
             return res.status(400).json({ message: 'Email and password are required' });
         }
+        console.log('Login attempt for email:', email);
+        // Find user by email
         const user = await models_1.User.findOne({ where: { email } });
         if (!user) {
+            console.log('User not found for email:', email);
             return res.status(401).json({ message: 'Invalid credentials' });
         }
-        const valid = await bcryptjs_1.default.compare(password, user.password);
+        console.log('User found:', user.id, user.email);
+        console.log('User dataValues:', user.dataValues);
+        // Get password from dataValues
+        const userPassword = user.password || user.dataValues?.password;
+        console.log('User password available:', !!userPassword);
+        // Verify password
+        const valid = await bcryptjs_1.default.compare(password, userPassword);
         if (!valid) {
+            console.log('Invalid password for user:', user.email);
             return res.status(401).json({ message: 'Invalid credentials' });
         }
-        const token = jsonwebtoken_1.default.sign({ id: user.id, email: user.email, role: user.role }, JWT_SECRET);
+        console.log('Password valid, generating token...');
+        // Generate JWT token
+        const token = jsonwebtoken_1.default.sign({
+            id: user.id,
+            email: user.email,
+            role: user.role
+        }, JWT_SECRET);
+        console.log('Token generated successfully');
+        // Extract user data safely from dataValues
+        const userData = {
+            id: user.id || user.dataValues?.id,
+            email: user.email || user.dataValues?.email,
+            name: user.name || user.dataValues?.name,
+            phone: user.phone || user.dataValues?.phone,
+            role: user.role || user.dataValues?.role,
+            skills: user.skills || user.dataValues?.skills,
+            resumeUrl: user.resumeUrl || user.dataValues?.resumeUrl,
+            avatarUrl: user.avatarUrl || user.dataValues?.avatarUrl,
+            createdAt: user.createdAt || user.dataValues?.createdAt,
+            updatedAt: user.updatedAt || user.dataValues?.updatedAt
+        };
+        console.log('Sending response with user data:', userData);
         res.json({
             token,
-            user: {
-                id: user.id,
-                email: user.email,
-                name: user.name,
-                role: user.role,
-            },
+            user: userData,
         });
     }
-    catch (e) {
-        next(e);
+    catch (error) {
+        console.error('Login error:', error);
+        res.status(500).json({
+            message: 'Internal server error',
+            error: process.env.NODE_ENV === 'development' ? error.message : undefined
+        });
     }
 }
 async function me(req, res, next) {
@@ -89,10 +134,19 @@ async function me(req, res, next) {
             name: user.name,
             phone: user.phone,
             role: user.role,
+            skills: user.skills,
+            resumeUrl: user.resumeUrl,
+            avatarUrl: user.avatarUrl,
+            createdAt: user.createdAt,
+            updatedAt: user.updatedAt
         });
     }
-    catch (e) {
-        next(e);
+    catch (error) {
+        console.error('Me endpoint error:', error);
+        res.status(500).json({
+            message: 'Internal server error',
+            error: process.env.NODE_ENV === 'development' ? error.message : undefined
+        });
     }
 }
 //# sourceMappingURL=auth.controller.js.map

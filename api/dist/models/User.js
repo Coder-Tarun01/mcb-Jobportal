@@ -10,17 +10,23 @@ class User extends sequelize_1.Model {
     password;
     phone;
     role;
+    skills;
+    resumeUrl;
+    avatarUrl;
     createdAt;
     updatedAt;
 }
 exports.User = User;
 User.init({
-    id: { type: sequelize_1.DataTypes.STRING, primaryKey: true },
+    id: { type: sequelize_1.DataTypes.UUID, defaultValue: sequelize_1.DataTypes.UUIDV4, primaryKey: true },
     email: { type: sequelize_1.DataTypes.STRING, allowNull: false, unique: true },
     name: { type: sequelize_1.DataTypes.STRING, allowNull: false },
     password: { type: sequelize_1.DataTypes.STRING, allowNull: false },
     phone: { type: sequelize_1.DataTypes.STRING, allowNull: true },
     role: { type: sequelize_1.DataTypes.ENUM('employee', 'employer'), allowNull: false },
+    skills: { type: sequelize_1.DataTypes.JSON, allowNull: true },
+    resumeUrl: { type: sequelize_1.DataTypes.STRING, allowNull: true },
+    avatarUrl: { type: sequelize_1.DataTypes.STRING, allowNull: true },
 }, {
     sequelize: index_1.sequelize,
     tableName: 'users',
