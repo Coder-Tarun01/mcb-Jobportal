@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Build folders
+mcb/build/
+mcb/dist/
+api/build/
+api/dist/
+
+# Env files
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
