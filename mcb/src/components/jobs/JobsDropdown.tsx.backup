@@ -1,0 +1,170 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { ChevronDown, Search, Building2, MapPin, Briefcase, Tag, Code, Filter } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import './JobsDropdown.css';
+
+interface JobsDropdownProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const JobsDropdown: React.FC<JobsDropdownProps> = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, onClose]);
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    onClose();
+  };
+
+  const mainMenuItems = [
+    {
+      id: 'all-jobs',
+      title: 'All Jobs',
+      icon: <Search className="menu-icon" />,
+      path: '/jobs'
+    },
+    {
+      id: 'company-jobs',
+      title: 'Company Jobs',
+      icon: <Building2 className="menu-icon" />,
+      path: '/jobs/company'
+    },
+    {
+      id: 'designation-jobs',
+      title: 'Designations-Jobs',
+      icon: <Briefcase className="menu-icon" />,
+      path: '/jobs/designations'
+    },
+    {
+      id: 'category-jobs',
+      title: 'Category Jobs',
+      icon: <Tag className="menu-icon" />,
+      path: '/jobs/category'
+    },
+    {
+      id: 'location-jobs',
+      title: 'Location Jobs',
+      icon: <MapPin className="menu-icon" />,
+      path: '/jobs/location'
+    },
+    {
+      id: 'skill-jobs',
+      title: 'Skill Jobs',
+      icon: <Code className="menu-icon" />,
+      path: '/jobs/skills'
+    }
+  ];
+
+  const browseJobItems = [
+    {
+      id: 'browse-list',
+      title: 'Browse Job List',
+      description: 'Clean vertical list view',
+      path: '/jobs/browse/list'
+    },
+    {
+      id: 'browse-grid',
+      title: 'Browse Job Grid',
+      description: 'Responsive grid layout',
+      path: '/jobs/browse/grid'
+    },
+    {
+      id: 'filter-list',
+      title: 'Browse Filter List',
+      description: 'List with advanced filters',
+      path: '/jobs/browse/filter-list'
+    },
+    {
+      id: 'filter-grid',
+      title: 'Browse Filter Grid',
+      description: 'Grid with integrated filters',
+      path: '/jobs/browse/filter-grid'
+    }
+  ];
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="jobs-dropdown-overlay">
+      <div ref={dropdownRef} className="jobs-dropdown">
+        <div className="dropdown-header">
+          <h3 className="dropdown-title">Find Your Dream Job</h3>
+          <p className="dropdown-subtitle">Explore opportunities across various categories</p>
+        </div>
+
+        <div className="dropdown-content">
+          {/* Main Menu Section */}
+          <div className="menu-section">
+            <h4 className="section-title">Job Categories</h4>
+            <div className="menu-grid">
+              {mainMenuItems.map((item) => (
+                <button
+                  key={item.id}
+                  className="menu-item"
+                  onClick={() => handleNavigation(item.path)}
+                  onMouseEnter={() => setActiveSubmenu(item.id)}
+                >
+                  <div className="menu-item-icon">{item.icon}</div>
+                  <div className="menu-item-content">
+                    <span className="menu-item-title">{item.title}</span>
+                    <ChevronDown className="menu-arrow" />
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Browse Jobs Section */}
+          <div className="menu-section">
+            <h4 className="section-title">Browse Jobs</h4>
+            <div className="browse-grid">
+              {browseJobItems.map((item) => (
+                <button
+                  key={item.id}
+                  className="browse-item"
+                  onClick={() => handleNavigation(item.path)}
+                >
+                  <div className="browse-item-header">
+                    <Filter className="browse-icon" />
+                    <span className="browse-title">{item.title}</span>
+                  </div>
+                  <p className="browse-description">{item.description}</p>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="dropdown-footer">
+          <button 
+            className="cta-button"
+            onClick={() => handleNavigation('/jobs')}
+          >
+            <Search className="cta-icon" />
+            <span>Browse All Jobs</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default JobsDropdown;

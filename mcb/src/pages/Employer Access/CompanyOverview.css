@@ -1,0 +1,424 @@
+.comp-over-overview-page {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  min-height: 100%;
+  background: #f8fafc;
+}
+
+.comp-over-overview-container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid #e5e7eb;
+}
+
+/* Page Header */
+.comp-over-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 20px;
+  position: relative;
+}
+
+.comp-over-back-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.comp-over-back-btn:hover {
+  color: #2563eb;
+  transform: translateX(-5px);
+}
+
+.comp-over-back-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.comp-over-header-content {
+  flex: 1;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comp-over-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Company Overview Form */
+.comp-over-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.comp-over-form-section {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.comp-over-form-section .comp-over-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.comp-over-form-section .comp-over-section-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--blue-500);
+}
+
+.comp-over-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comp-over-form-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 4px;
+}
+
+/* Form Textareas */
+.comp-over-form-textarea {
+  padding: 14px 16px;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  font-size: 15px;
+  color: var(--gray-800);
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.comp-over-form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.comp-over-story-textarea {
+  min-height: 200px;
+}
+
+.comp-over-culture-textarea {
+  min-height: 150px;
+}
+
+.comp-over-textarea-hint {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+.comp-over-char-count {
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* Benefits Grid */
+.comp-over-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.comp-over-benefit-category {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.comp-over-benefit-category:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
+}
+
+.comp-over-category-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 20px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.comp-over-benefit-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comp-over-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.comp-over-benefit-item:hover {
+  border-color: #3b82f6;
+  background: #f1f5f9;
+  transform: translateY(-1px);
+}
+
+.comp-over-benefit-item:has(.comp-over-benefit-checkbox:checked) {
+  background: #eff6ff;
+  border-color: #3b82f6;
+  color: #1e40af;
+}
+
+.comp-over-benefit-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+/* Action Buttons */
+.comp-over-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.comp-over-back-btn-action,
+.comp-over-preview-btn,
+.comp-over-update-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 160px;
+  justify-content: center;
+}
+
+.comp-over-back-btn-action {
+  background: #ffffff;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+}
+
+.comp-over-back-btn-action:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+  color: #374151;
+  transform: translateY(-1px);
+}
+
+.comp-over-preview-btn {
+  background: #f8fafc;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+.comp-over-preview-btn:hover {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+  color: #1e293b;
+  transform: translateY(-1px);
+}
+
+.comp-over-update-btn {
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.comp-over-update-btn:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.comp-over-update-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.comp-over-btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.comp-over-loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff40;
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .comp-over-overview-container {
+    padding: 20px;
+  }
+
+  .comp-over-form-section {
+    padding: 20px;
+  }
+
+  .comp-over-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .comp-over-form-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .comp-over-back-btn-action,
+  .comp-over-preview-btn,
+  .comp-over-update-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+
+  .comp-over-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .comp-over-back-btn {
+    position: static;
+    align-self: flex-start;
+  }
+
+  .comp-over-header-content {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .comp-over-title {
+    font-size: 30px;
+  }
+
+  .comp-over-form-section .comp-over-section-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .comp-over-overview-container {
+    padding: 16px;
+  }
+
+  .comp-over-form-section {
+    padding: 16px;
+  }
+
+  .comp-over-form-textarea {
+    padding: 12px 14px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  .comp-over-story-textarea {
+    min-height: 160px;
+  }
+
+  .comp-over-culture-textarea {
+    min-height: 120px;
+  }
+
+  .comp-over-benefit-category {
+    padding: 16px;
+  }
+
+  .comp-over-title {
+    font-size: 26px;
+  }
+
+  .comp-over-form-section .comp-over-section-title {
+    font-size: 16px;
+  }
+
+  .comp-over-form-actions {
+    padding: 16px 0;
+  }
+}
+
+/* Focus styles for accessibility */
+.comp-over-form-textarea:focus,
+.comp-over-benefit-checkbox:focus,
+.comp-over-back-btn-action:focus,
+.comp-over-preview-btn:focus,
+.comp-over-update-btn:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}

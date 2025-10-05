@@ -1,0 +1,2087 @@
+
+/* Main Profile Card */
+.mcb-resume-main-profile-card {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.mcb-resume-main-profile-card::before {
+  display: none;
+}
+
+.mcb-resume-profile-section {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.mcb-resume-profile-image-section {
+  flex-shrink: 0;
+}
+
+.mcb-resume-profile-image {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.mcb-resume-profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.mcb-resume-camera-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  background: #3b82f6;
+  border: 3px solid #1e293b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.mcb-resume-camera-overlay:hover {
+  background: #2563eb;
+  transform: scale(1.1);
+}
+
+.mcb-resume-camera-icon {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+.mcb-resume-profile-details {
+  flex: 1;
+  color: white;
+}
+
+.mcb-resume-profile-name-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.mcb-resume-profile-name-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.mcb-resume-edit-name-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mcb-resume-edit-name-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.mcb-resume-edit-name-btn .mcb-resume-edit-icon {
+  width: 16px;
+  height: 16px;
+  color: white;
+}
+
+.mcb-resume-profile-role {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+}
+
+.mcb-resume-profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.mcb-resume-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+.mcb-resume-info-icon {
+  width: 18px;
+  height: 18px;
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+.mcb-resume-profile-strength {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.mcb-resume-strength-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.mcb-resume-strength-header span:first-child {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.mcb-resume-strength-percentage {
+  font-size: 0.9rem;
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+.mcb-resume-strength-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mcb-resume-strength-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Pending Action Card */
+.mcb-resume-pending-action-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 280px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.mcb-resume-pending-action-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1rem 0;
+}
+
+.mcb-resume-action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mcb-resume-action-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.mcb-resume-action-item.mcb-resume-action-item-completed {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.mcb-resume-action-item:hover {
+  background: #f1f5f9;
+  transform: translateX(4px);
+}
+
+.mcb-resume-action-item.mcb-resume-action-item-completed:hover {
+  background: #ecfdf5;
+}
+
+.mcb-resume-check-icon {
+  width: 18px;
+  height: 18px;
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.mcb-resume-action-item span {
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.mcb-resume-action-item.mcb-resume-action-item-completed span {
+  color: #059669;
+}
+
+/* Resume Sections Banner */
+.mcb-resume-sections-banner {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.mcb-resume-sections-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(30%, -30%);
+}
+
+.mcb-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.mcb-banner-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mcb-banner-icon-svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.mcb-banner-text {
+  flex: 1;
+  color: white;
+}
+
+.mcb-banner-text h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: white;
+}
+
+.mcb-banner-text p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.mcb-banner-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.mcb-progress-text {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.mcb-progress-bar-small {
+  width: 120px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.mcb-progress-fill-small {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Resume Sections Grid */
+.mcb-resume-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.mcb-section-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mcb-section-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.mcb-section-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+.mcb-section-card:hover::before {
+  transform: scaleX(1);
+}
+
+.mcb-section-card:active {
+  transform: translateY(-2px);
+}
+
+.mcb-section-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.mcb-section-card:hover .mcb-section-icon {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  transform: scale(1.05);
+}
+
+.mcb-section-icon-svg {
+  width: 24px;
+  height: 24px;
+  color: #64748b;
+  transition: color 0.3s ease;
+}
+
+.mcb-section-card:hover .mcb-section-icon-svg {
+  color: #3b82f6;
+}
+
+.mcb-section-content {
+  flex: 1;
+}
+
+.mcb-section-content h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.mcb-section-card:hover .mcb-section-content h4 {
+  color: #3b82f6;
+}
+
+.mcb-section-content p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+}
+
+.mcb-section-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.mcb-section-status.completed {
+  background: #f0fdf4;
+  color: #059669;
+  border: 1px solid #bbf7d0;
+}
+
+.mcb-section-status.pending {
+  background: #fef3c7;
+  color: #d97706;
+  border: 1px solid #fde68a;
+}
+
+.mcb-status-icon {
+  width: 16px;
+  height: 16px;
+  color: #10b981;
+}
+
+.mcb-pending-dot {
+  width: 8px;
+  height: 8px;
+  background: #f59e0b;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive Design for Main Profile Card */
+@media (max-width: 1024px) {
+  .mcb-main-profile-card {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .mcb-profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .mcb-profile-image-section {
+    align-self: center;
+  }
+  
+  .mcb-pending-action-card {
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .mcb-main-profile-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mcb-profile-name-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .mcb-profile-role {
+    font-size: 1rem;
+  }
+  
+  .mcb-profile-info {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mcb-info-item {
+    font-size: 0.9rem;
+  }
+  
+  .mcb-pending-action-card {
+    padding: 1rem;
+  }
+  
+  .mcb-action-item {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mcb-main-profile-card {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+  
+  .mcb-profile-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .mcb-camera-overlay {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .mcb-camera-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .mcb-profile-name-section h2 {
+    font-size: 1.25rem;
+  }
+  
+  .mcb-profile-role {
+    font-size: 0.9rem;
+  }
+  
+  .mcb-profile-strength {
+    padding: 0.75rem;
+  }
+  
+  .mcb-pending-action-card {
+    padding: 0.75rem;
+  }
+  
+  .mcb-action-item span {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive Design for Resume Sections */
+@media (max-width: 1024px) {
+  .mcb-resume-sections-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  
+  .mcb-banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .mcb-banner-progress {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .mcb-resume-sections-banner {
+    padding: 1.25rem;
+  }
+  
+  .mcb-banner-text h3 {
+    font-size: 1.1rem;
+  }
+  
+  .mcb-banner-text p {
+    font-size: 0.85rem;
+  }
+  
+  .mcb-resume-sections-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .mcb-section-card {
+    padding: 1.25rem;
+  }
+  
+  .mcb-section-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .mcb-section-icon-svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .mcb-section-content h4 {
+    font-size: 1rem;
+  }
+  
+  .mcb-section-content p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mcb-resume-sections-banner {
+    padding: 1rem;
+  }
+  
+  .mcb-banner-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .mcb-banner-icon-svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .mcb-banner-text h3 {
+    font-size: 1rem;
+  }
+  
+  .mcb-banner-text p {
+    font-size: 0.8rem;
+  }
+  
+  .mcb-progress-bar-small {
+    width: 100px;
+  }
+  
+  .mcb-section-card {
+    padding: 1rem;
+  }
+  
+  .mcb-section-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .mcb-section-icon-svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .mcb-section-content h4 {
+    font-size: 0.95rem;
+  }
+  
+  .mcb-section-content p {
+    font-size: 0.75rem;
+  }
+  
+  .mcb-section-status {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+/* Resume Header */
+.mcb-resume-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+  margin-bottom: 1rem;
+}
+
+.mcb-header-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mcb-header-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mcb-header-icon-svg {
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+
+.mcb-header-text {
+  flex: 1;
+}
+
+.mcb-resume-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mcb-resume-subtitle {
+  font-size: 1.125rem;
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.mcb-header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.mcb-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  font-size: 0.875rem;
+}
+
+.mcb-action-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mcb-action-btn.preview {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.mcb-action-btn.save {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.mcb-btn-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Save Section */
+.mcb-save-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 16px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.mcb-save-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.mcb-save-all-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  min-width: 200px;
+}
+
+.mcb-save-all-btn:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+}
+
+.mcb-save-all-btn:active {
+  transform: translateY(0);
+}
+
+.mcb-save-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.mcb-save-note {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Resume Cards */
+.mcb-resume-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.mcb-resume-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.mcb-resume-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  border-bottom: 1px solid #f1f5f9;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.mcb-resume-card-title-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+
+.mcb-resume-card-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.mcb-resume-card-icon-svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.mcb-resume-card-title-content {
+  flex: 1;
+}
+
+.mcb-resume-card-title-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+.mcb-resume-card-subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.mcb-resume-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.mcb-resume-edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.mcb-resume-edit-btn.mcb-resume-edit-btn-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.mcb-resume-edit-btn.mcb-resume-edit-btn-primary:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+.mcb-resume-edit-btn.mcb-resume-edit-btn-secondary {
+  background: #f8fafc;
+  color: #3b82f6;
+  border: 1px solid #e2e8f0;
+}
+
+.mcb-resume-edit-btn.mcb-resume-edit-btn-secondary:hover {
+  background: #e2e8f0;
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.mcb-resume-edit-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.mcb-resume-card-content {
+  padding: 2rem;
+}
+
+/* Content Display */
+.mcb-resume-content-display {
+  padding: 1rem 0;
+}
+
+.mcb-resume-headline-text {
+  font-size: 1.125rem;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Skills */
+.mcb-resume-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.mcb-resume-skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.mcb-resume-skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.mcb-resume-skill-remove {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.mcb-resume-skill-remove:hover {
+  background: rgba(239, 68, 68, 0.8);
+  transform: scale(1.1);
+}
+
+.mcb-resume-remove-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.mcb-resume-add-skill-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8fafc;
+  color: #3b82f6;
+  border: 2px dashed #cbd5e1;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.mcb-resume-add-skill-btn:hover {
+  background: #e2e8f0;
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.mcb-resume-add-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Employment */
+.mcb-resume-employment-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.mcb-resume-employment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.mcb-resume-position-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+.mcb-resume-employment-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mcb-resume-action-btn-small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.mcb-resume-action-btn-small.mcb-resume-action-btn-small-edit {
+  background: #3b82f6;
+  color: white;
+}
+
+.mcb-resume-action-btn-small.mcb-resume-action-btn-small-edit:hover {
+  background: #2563eb;
+  transform: scale(1.1);
+}
+
+.mcb-resume-action-btn-small.mcb-resume-action-btn-small-delete {
+  background: #ef4444;
+  color: white;
+}
+
+.mcb-resume-action-btn-small.mcb-resume-action-btn-small-delete:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+
+.mcb-resume-action-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.mcb-resume-employment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mcb-resume-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.mcb-resume-detail-row.mcb-resume-detail-row-full-width {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mcb-resume-detail-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.mcb-resume-detail-value {
+  color: #64748b;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.mcb-resume-detail-value.mcb-resume-detail-value-company {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.mcb-resume-detail-value.mcb-resume-detail-value-availability {
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* Education */
+.mcb-resume-education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mcb-resume-education-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #3b82f6;
+}
+
+.mcb-resume-education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mcb-resume-education-info {
+  flex: 1;
+}
+
+.mcb-resume-education-degree {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+.mcb-resume-education-institution {
+  margin: 0 0 0.25rem 0;
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.mcb-resume-education-year {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.mcb-resume-education-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mcb-resume-add-education {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.mcb-resume-add-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8fafc;
+  color: #3b82f6;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.mcb-resume-add-btn:hover {
+  background: #e2e8f0;
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+/* IT Skills Table */
+.mcb-resume-skills-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.mcb-resume-skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  background: white;
+}
+
+.mcb-resume-skills-table th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #374151;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.mcb-resume-skills-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.mcb-resume-skill-row:hover {
+  background: #f8fafc;
+}
+
+.mcb-resume-skill-name {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.mcb-resume-skill-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  display: inline-block;
+}
+
+.mcb-resume-skill-version {
+  text-align: center;
+}
+
+.mcb-resume-version-badge {
+  background: #3b82f6;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.mcb-resume-skill-last-used {
+  color: #64748b;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.mcb-resume-skill-experience {
+  text-align: center;
+}
+
+.mcb-resume-experience-badge {
+  background: #10b981;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.mcb-resume-skill-actions {
+  text-align: center;
+}
+
+.mcb-resume-action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Projects */
+.mcb-resume-projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mcb-resume-project-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #3b82f6;
+}
+
+.mcb-resume-project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.mcb-resume-project-info {
+  flex: 1;
+}
+
+.mcb-resume-project-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+.mcb-resume-project-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.mcb-resume-project-company {
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.mcb-resume-project-duration {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.mcb-resume-project-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mcb-resume-project-description {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Profile Summary */
+.mcb-resume-summary-container {
+  position: relative;
+}
+
+.mcb-resume-profile-summary-textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #374151;
+  background: #ffffff;
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.mcb-resume-profile-summary-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.mcb-resume-character-count {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 1rem;
+  background: #f8fafc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* Accomplishments */
+.mcb-resume-accomplishments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.mcb-resume-accomplishment-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mcb-resume-accomplishment-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.mcb-resume-input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.mcb-resume-accomplishment-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #374151;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.mcb-resume-accomplishment-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.mcb-resume-add-accomplishment-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.mcb-resume-add-accomplishment-btn:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+/* Career Profile */
+.mcb-resume-career-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.mcb-resume-career-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mcb-resume-career-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.mcb-resume-career-input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.mcb-resume-career-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #374151;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.mcb-resume-career-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.mcb-resume-career-input[readonly] {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.mcb-resume-career-edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #f1f5f9;
+  color: #3b82f6;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.mcb-resume-career-edit-btn:hover {
+  background: #e2e8f0;
+  border-color: #3b82f6;
+  transform: scale(1.05);
+}
+
+.mcb-resume-career-add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.mcb-resume-career-add-btn:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+/* Personal Details */
+.mcb-resume-personal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.mcb-resume-personal-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mcb-resume-personal-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.mcb-resume-personal-input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.mcb-resume-personal-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #374151;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.mcb-resume-personal-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.mcb-resume-personal-input[readonly] {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.mcb-resume-personal-edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #f1f5f9;
+  color: #3b82f6;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.mcb-resume-personal-edit-btn:hover {
+  background: #e2e8f0;
+  border-color: #3b82f6;
+  transform: scale(1.05);
+}
+
+/* Resume Upload */
+.mcb-resume-upload-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mcb-resume-description {
+  color: #64748b;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.mcb-resume-upload {
+  margin: 0;
+}
+
+.mcb-resume-upload-area {
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mcb-resume-upload-area:hover {
+  border-color: #3b82f6;
+  background: #f0f9ff;
+  transform: translateY(-2px);
+}
+
+.mcb-resume-upload-icon {
+  width: 48px;
+  height: 48px;
+  color: #3b82f6;
+}
+
+.mcb-resume-upload-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mcb-resume-upload-title {
+  margin: 0;
+  font-weight: 600;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.mcb-resume-file-size {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 400;
+}
+
+.mcb-resume-file-formats {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.mcb-resume-upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.mcb-resume-upload-btn:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+.mcb-resume-alternative {
+  text-align: center;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.mcb-resume-alternative p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.mcb-resume-alternative-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mcb-resume-alternative-link:hover {
+  text-decoration: underline;
+}
+
+/* Resume Subsection */
+.mcb-resume-subsection {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mcb-resume-subsection-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(59, 130, 246, 0.1);
+}
+
+.mcb-resume-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8fafc;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.mcb-resume-back-btn:hover {
+  background: #e2e8f0;
+  color: #374151;
+  border-color: #cbd5e1;
+  transform: translateX(-2px);
+}
+
+.mcb-resume-back-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.mcb-resume-subsection-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mcb-resume-form-container {
+    gap: 1.5rem;
+  }
+  
+  .mcb-resume-accomplishments-grid,
+  .mcb-resume-career-grid,
+  .mcb-resume-personal-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .mcb-resume-skills-table {
+    font-size: 0.8rem;
+  }
+  
+  .mcb-resume-skills-table th,
+  .mcb-resume-skills-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mcb-resume-header {
+    padding: 1.5rem;
+  }
+  
+  .mcb-resume-header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .mcb-resume-title {
+    font-size: 1.5rem;
+  }
+  
+  .mcb-resume-subtitle {
+    font-size: 1rem;
+  }
+  
+  .mcb-resume-header-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .mcb-resume-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .mcb-resume-card-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .mcb-resume-card-title-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  .mcb-resume-card-actions {
+    justify-content: center;
+  }
+  
+  .mcb-resume-accomplishments-grid,
+  .mcb-resume-career-grid,
+  .mcb-resume-personal-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mcb-resume-skills-table-container {
+    overflow-x: auto;
+  }
+  
+  .mcb-resume-skills-table {
+    min-width: 600px;
+  }
+  
+  .mcb-resume-employment-details {
+    gap: 0.5rem;
+  }
+  
+  .mcb-resume-detail-row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .mcb-resume-detail-label {
+    min-width: auto;
+  }
+  
+  .mcb-resume-project-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .mcb-resume-subsection-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .mcb-resume-save-section {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .mcb-resume-save-all-btn {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .mcb-resume-form-container {
+    gap: 1rem;
+  }
+  
+  .mcb-resume-header {
+    padding: 1rem;
+  }
+  
+  .mcb-resume-card-header,
+  .mcb-resume-card-content {
+    padding: 1rem;
+  }
+  
+  .mcb-resume-pending-action-card {
+    padding: 1rem;
+  }
+  
+  .mcb-resume-action-list {
+    gap: 0.75rem;
+  }
+  
+  .mcb-resume-action-item {
+    padding: 0.75rem;
+  }
+  
+  .mcb-resume-skills-container {
+    gap: 0.5rem;
+  }
+  
+  .mcb-resume-skill-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .mcb-resume-add-education {
+    flex-direction: column;
+  }
+  
+  .mcb-resume-add-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .mcb-resume-input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .mcb-resume-add-accomplishment-btn,
+  .mcb-resume-career-edit-btn,
+  .mcb-resume-career-add-btn,
+  .mcb-resume-personal-edit-btn {
+    width: 100%;
+    height: 40px;
+  }
+  
+  .mcb-resume-save-section {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  
+  .mcb-resume-save-all-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Focus states for accessibility */
+.mcb-resume-edit-btn:focus,
+.mcb-resume-action-btn:focus,
+.mcb-resume-add-btn:focus,
+.mcb-resume-back-btn:focus,
+.mcb-resume-action-btn-small:focus,
+.mcb-resume-save-all-btn:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.mcb-resume-edit-btn:disabled,
+.mcb-resume-action-btn:disabled,
+.mcb-resume-add-btn:disabled,
+.mcb-resume-back-btn:disabled,
+.mcb-resume-action-btn-small:disabled,
+.mcb-resume-save-all-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Smooth animations */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Prevent text wrapping where needed */
+.mcb-no-wrap {
+  white-space: nowrap;
+}
+
+.mcb-text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Custom scrollbar for better UX */
+.mcb-resume-form-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mcb-resume-form-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.mcb-resume-form-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.mcb-resume-form-container::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

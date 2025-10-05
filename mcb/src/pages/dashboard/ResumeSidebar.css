@@ -1,0 +1,375 @@
+/* Resume Sidebar */
+.mcb-resume-sidebar {
+  width: 280px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Back Button */
+.mcb-resume-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border: none;
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #e2e8f0;
+  width: 100%;
+  text-align: left;
+}
+
+.mcb-resume-back-btn:hover {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  color: #334155;
+}
+
+.mcb-back-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.mcb-resume-back-btn:hover .mcb-back-icon {
+  transform: translateX(-2px);
+}
+
+/* Resume Navigation */
+.mcb-resume-nav {
+  flex: 1;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mcb-resume-nav-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 1.5rem 1rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 1rem;
+}
+
+.mcb-resume-nav-icon {
+  width: 20px;
+  height: 20px;
+  color: #3b82f6;
+}
+
+.mcb-resume-nav-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+/* Specific styling for "Resume Sections" heading - very subtle */
+.mcb-resume-nav-header .resume-sections-title {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: #9ca3af !important;
+  margin: 0 !important;
+  padding: 0.25rem 0 !important;
+  text-align: left !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+}
+
+.mcb-resume-nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0 0.75rem;
+}
+
+.mcb-resume-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.mcb-resume-nav-item:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  color: #374151;
+  transform: translateX(4px);
+}
+
+.mcb-resume-nav-item.mcb-active {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  color: #1d4ed8;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.mcb-resume-nav-item.mcb-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 24px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 0 2px 2px 0;
+}
+
+.mcb-resume-nav-item .mcb-resume-nav-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.mcb-resume-nav-item:hover .mcb-resume-nav-icon {
+  transform: scale(1.1);
+}
+
+.mcb-resume-nav-item.mcb-active .mcb-resume-nav-icon {
+  color: #1d4ed8;
+}
+
+.mcb-resume-nav-label {
+  flex: 1;
+  font-weight: inherit;
+  transition: all 0.3s ease;
+}
+
+.mcb-resume-nav-item:hover .mcb-resume-nav-label {
+  transform: translateX(2px);
+}
+
+.mcb-resume-active-indicator {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: #3b82f6;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Resume Progress */
+.mcb-resume-progress {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-top: 1px solid #e2e8f0;
+  margin-top: auto;
+}
+
+.mcb-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.mcb-progress-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.mcb-progress-percentage {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.mcb-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.mcb-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mcb-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  animation: mcb-shimmer 2s infinite;
+}
+
+@keyframes mcb-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.mcb-progress-note {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mcb-resume-sidebar {
+    width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mcb-resume-sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .mcb-resume-sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .mcb-resume-nav-items {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  .mcb-resume-progress {
+    position: sticky;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .mcb-resume-sidebar {
+    width: 100vw;
+  }
+  
+  .mcb-resume-back-btn {
+    padding: 0.875rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .mcb-resume-nav-header {
+    padding: 0 1rem 1rem 1rem;
+  }
+  
+  .mcb-resume-nav-header h3 {
+    font-size: 0.9rem;
+  }
+  
+  .mcb-resume-nav-item {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.8rem;
+  }
+  
+  .mcb-resume-nav-item .mcb-resume-nav-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .mcb-resume-progress {
+    padding: 1rem;
+  }
+  
+  .mcb-progress-label,
+  .mcb-progress-percentage {
+    font-size: 0.8rem;
+  }
+  
+  .mcb-progress-note {
+    font-size: 0.7rem;
+  }
+}
+
+/* Focus states for accessibility */
+.mcb-resume-back-btn:focus,
+.mcb-resume-nav-item:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.mcb-resume-back-btn:disabled,
+.mcb-resume-nav-item:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Custom scrollbar for resume nav items */
+.mcb-resume-nav-items::-webkit-scrollbar {
+  width: 4px;
+}
+
+.mcb-resume-nav-items::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mcb-resume-nav-items::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+
+.mcb-resume-nav-items::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animation for smooth transitions */
+.mcb-resume-sidebar * {
+  transition: all 0.3s ease;
+}
+
+/* Hover effects for better UX */
+.mcb-resume-nav-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mcb-resume-nav-item.mcb-active:hover {
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.2);
+}

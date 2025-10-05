@@ -1,0 +1,250 @@
+/* Employers Register Page */
+.emp-reg-register-page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Header */
+.register-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8f9fa;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 32px;
+}
+
+.back-btn:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 12px;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Register Options */
+.register-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.register-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 40px 32px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.register-card:hover .card-icon {
+  background: rgba(59, 130, 246, 0.15);
+  transform: scale(1.05);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  color: #3b82f6;
+  stroke-width: 1.5;
+}
+
+.card-content {
+  margin-bottom: 32px;
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 12px;
+}
+
+.card-description {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  font-style: italic;
+}
+
+.register-btn {
+  width: 100%;
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.register-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.register-btn:active {
+  transform: translateY(0);
+}
+
+/* Footer */
+.register-footer {
+  text-align: center;
+}
+
+.footer-text {
+  color: #6c757d;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.emp-reg-link {
+  color: #3b82f6;
+  background: none;
+  border: none;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.emp-reg-link:hover {
+  color: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .emp-reg-register-page {
+    padding: 20px 16px;
+  }
+
+  .register-container {
+    max-width: 100%;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  .register-options {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .register-card {
+    padding: 32px 24px;
+  }
+
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .register-card {
+    padding: 28px 20px;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+}

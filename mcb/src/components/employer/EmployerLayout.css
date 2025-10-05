@@ -1,0 +1,67 @@
+.employer-layout {
+  display: flex;
+  min-height: calc(100vh - 80px);
+  background: #f8fafc;
+  margin: 0;
+  max-width: 100%;
+  position: relative;
+  overflow: visible;
+  padding: 0;
+  gap: 0;
+  width: 98%;
+  margin-top: 0;
+  padding-left: 50px;
+  align-items: stretch;
+}
+
+/* Main content styles removed - children now render directly */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .employer-sidebar {
+    width: 240px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .employer-layout {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .employer-layout {
+    flex-direction: column;
+    margin-top: 0;
+    height: auto;
+    overflow: visible;
+    padding: 0 10px;
+    align-items: stretch;
+  }
+  
+  .employer-sidebar {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    position: static;
+    overflow: visible;
+    top: auto;
+    left: auto;
+    z-index: auto;
+  }
+  
+  /* Main content styles removed */
+}
+
+/* Page content styling - now applied directly to children */
+.employer-layout > *:not(.employer-sidebar) {
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
